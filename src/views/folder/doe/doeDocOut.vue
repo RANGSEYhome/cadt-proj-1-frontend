@@ -324,7 +324,7 @@ export default {
       btnUpdate.value = !btnUpdate.value; // Toggle visibility
       isDisabled.value = !isDisabled.value; // Toggle visibility
     };
-    const updateFile = handleSubmit(async () => {
+    const updateFile = (async () => {
       const ID = fileID.value
       console.log(numEdit.value)
       console.log(titleEdit.value)

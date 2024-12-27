@@ -116,7 +116,11 @@
         "
       >
         <Navmenu :items="menuItems" />
-      </SimpleBar>
+      </SimpleBar> 
+
+      <!-- <SimpleBar class="sidebar-menu px-4 h-[calc(100%-200px)]">
+        <MenuItem v-for="(item, index) in menuItems" :key="index" :item="item" />
+      </SimpleBar> -->
     </div>
   </div>
 </template>
@@ -124,6 +128,7 @@
 
 <script>
 // import { Icon } from "@iconify/vue";
+// import {MenuItem} from "./menuitem.vue";
 import { defineComponent, inject } from "vue";
 import { perSlug } from "../../constant/permission";
 import Navmenu from "./Navmenu";
@@ -134,9 +139,11 @@ import { ref, onMounted } from "vue";
 export default defineComponent({
   components: {
     // Icon,
+    // MenuItem,
     Navmenu,
     perSlug,
     SimpleBar,
+    // menuitem,
   },
   data() {
     return {
@@ -204,6 +211,32 @@ export default defineComponent({
           ],
         });
 
+
+        
+      // for slug DAC
+      // if (services.checkPermission(perSlug[0].DAC)) {
+        // if (!menuItems.value.find((item) => item.title === "dac")) {
+          // menuItems.value.push({
+          //   title: "ន. កម្មវីធីកុំព្យទ័រ",
+          //   icon: "stash:folder-solid",
+          //   link: "#",
+          //   isOpen: true,
+          //   child: [
+          //     {
+          //       childtitle: "ឯកសារចេញ",
+          //       childlink: "dac-docout",
+          //       icon: "fluent:folder-arrow-right-48-regular",
+          //     },
+          //     {
+          //       childtitle: "ឯកសារចូល",
+          //       childlink: "dac-docin",
+          //       icon: "fluent:folder-arrow-left-48-regular",
+          //     },
+          //   ],
+          // });
+        // }
+      // }
+
         menuItems.value.push({
           isHeadr: true,
           title: "user management",
@@ -269,6 +302,11 @@ export default defineComponent({
           });
         }
       }
+
+
+
+
+
       
 // slug Admin
       if (services.checkPermission(perSlug[0].ADMIN)) {
