@@ -5,6 +5,9 @@ import ViteImages from "vite-plugin-vue-images";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  build: {
+    chunkSizeWarningLimit: 1500, // Set limit to 1000 KB
+  },
   plugins: [
     Vue(),
     ViteImages({
