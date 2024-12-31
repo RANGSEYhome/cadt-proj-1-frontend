@@ -115,6 +115,11 @@ export default {
           var currentDate = new Date().toISOString().slice(0, 10);
           localStorage.setItem("activeUser", JSON.stringify(response.data));
           localStorage.setItem("loginExpired", JSON.stringify(currentDate));
+         
+          // localStorage.setItem("activeUser", JSON.stringify(response.data));
+          // localStorage.setItem("exp", JSON.stringify(response.data));
+
+
           return true;
         })
         .catch((e) => {
