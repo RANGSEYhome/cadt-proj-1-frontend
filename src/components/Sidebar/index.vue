@@ -40,7 +40,7 @@
           class="app-logo"
         >
           <img
-            src="@/assets/images/logo/mptc_logo_small.png"
+            src="../../assets/images/logo/mptc_logo_small.png"
             alt=""
             v-if="
               !this.$store.themeSettingsStore.isDark &&
@@ -49,7 +49,7 @@
           />
 
           <img
-            src="@/assets/images/logo/mptc_logo_small.png"
+            src="../../assets/images/logo/mptc_logo_small.png"
             alt=""
             v-if="
               this.$store.themeSettingsStore.isDark ||
@@ -65,7 +65,7 @@
           "
         >
           <img
-            src="@/assets/images/logo/mptc_logo.png"
+            src="../../assets/images/logo/mptc_logo.png"
             alt=""
             v-if="
               !this.$store.themeSettingsStore.isDark &&
@@ -73,7 +73,7 @@
             "
           />
           <img
-            src="@/assets/images/logo/mptc_logo.png"
+            src="../../assets/images/logo/mptc_logo.png"
             alt=""
             v-if="
               this.$store.themeSettingsStore.isDark ||
